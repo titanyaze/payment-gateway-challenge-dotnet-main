@@ -10,7 +10,9 @@ Takehome home solution that I have produced in C# and .NET
 
 ## Assumptions 
 
-- Every payment request that is sent will need to be processed into a PostPaymentRequest. Regardless if it has been Authorised,Declined or Rejected within the payment gateway. If it has been Rejected it will still created a PostPaymentRequest but will not be processed by the acquiring bank.
+- Every payment request that is sent, regardless of the response (Authorized, Declined or Rejected) with in the payment gateway will need to be processed as a PostPaymentRequest object.
+
+- Note: If a payment is rejected it will still need to be processed as a PostPaymentRequest but it will not be processed by the acquiring bank.
 
 
 
