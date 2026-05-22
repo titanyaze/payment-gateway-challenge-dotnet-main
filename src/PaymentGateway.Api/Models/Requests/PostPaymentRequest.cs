@@ -25,9 +25,9 @@ public class PostPaymentRequest
                 CardNumber = "0000000000000000";
             }
         }
-        if(Cvv.Length < 3 || Cvv.Length > 4 || !CardNumber.All(char.IsDigit))
+        if(Cvv.Length < 3 || Cvv.Length > 4 || !Cvv.All(char.IsDigit))
         {
-            if (!CardNumber.All(char.IsDigit))
+            if (!Cvv.All(char.IsDigit))
             {
                 Cvv = "000";
             }
@@ -38,7 +38,7 @@ public class PostPaymentRequest
         {
             isValid = false;
         }
-        if(ExpiryMonth < 0 || ExpiryMonth > 12)
+        if(ExpiryMonth < 1 || ExpiryMonth > 12)
         {
             return false;
         }
